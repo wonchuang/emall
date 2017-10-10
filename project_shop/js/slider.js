@@ -1,0 +1,35 @@
+    $(()=>{
+        var rcd=0;       //代表图片和li标签编号的全局变量
+//       滑动函数
+        function slide(){   
+          rcd++;
+          if(rcd==4){  
+			  //右滑到最后一张时,将图片设定为第一张的位置,即将滑动的图片设定为第二张(rcd=1)
+          $('#sld').css({'left':'0'});
+            rcd=1;
+          };
+          var dis = rcd*(-759)+'px';    //759图片宽度,rcd和dis的关系就是下标和div left值
+          $('#sld').stop().animate({'left':dis},1000)  //设定left
+          if (rcd==3) {    //当切换到最后一张时(一共3张图片),将左下方的标签样式也改成与第一张一样的
+            $('#show-img ul li').eq(0).css({'opacity': '0.6'}).siblings('li').css({'opacity': '0.2'})
+          }else{
+            $('#show-img ul li').eq(rcd).css({'opacity': '0.6'}).siblings('li').css({'opacity': '0.2'})      //不是最后一张那么就正常执行
+          }
+        }
+//       设定定时器,开始轮播
+        var timer = setInterval(slide,2000);
+        var st;    //声明倒计时函数变量名
+//       绑定li鼠标点击事件
+        $('#show-img ul li').click(()=>{
+          clearInterval(timer);     //清除定时器(同下一行)
+          clearTimeout(st);
+          var rcd = $(this).index();   //获得点击的li的下标
+          var dis =rcd*(-759)+'px';   //获得该编号对应的div的left值
+          $('#sld').stop().animate({'left':dis},500)  //开始运动
+          $('#show-img ul li').eq(rcd).css({'opacity': '0.6'}).siblings('li').css({'opacity': '0.2'})     //设置当前li样式,其他li变为初始值
+          st = setTimeout(()=>{   //设置定时器,若3秒内没有鼠标点击操作,就重新设置轮播定时器
+            timer = setInterval(slide,2000);
+          },3000);
+        }); 
+    })
+

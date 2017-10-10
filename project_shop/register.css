@@ -1,0 +1,123 @@
+
+   
+   .main{
+	background-size: cover;
+	background-image:url(images/bg2.jpg);
+    background-repeat:no-repeat;
+	}
+   .bor{
+    width: 100%;
+    height:900px;
+	margin-bottom: 150px;
+   }
+   .bor_con{
+    position:relative;
+    width: 90%;
+    height: 100%;
+    margin-top: 30px;
+    margin-left: 66px;
+   }
+   .bor_con2{
+    background-color: #FFF;
+    opacity: 0.8;
+   }
+   .bor_con1{
+    position: absolute;
+    width: 600px;
+    height: 700px;
+    left: 454px;
+    top: 30px;
+   }
+   .bc{
+    left: 179px;
+    width: 275px;
+    background: url(images/bgclimb3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+   }
+
+
+   .gis{
+    width:100%;
+	height:70px;
+   }
+   .gis p{
+    font-family: -webkit-body;
+    margin: 0;
+    margin-left: 40px;
+    margin-top: 15px;
+	font-size: 1.1em;
+    font-weight: bold;
+   }
+   .gis input{
+    border: 0px;
+    border-bottom: 1px solid #cfcfcf;
+    width: 520px;
+    height: 50px;
+    font-size: 0.8em;
+    outline: none;
+    margin-left: 40px;
+	background-color:transparent;
+   }
+   .bor_con1 span{
+    position: relative;
+    top: 12px;
+    left: 40px;
+    font-family:  serif;
+   }
+   .gbs{
+    width:0px;
+	height:0px;
+   }
+    #register{
+    width: 520px;
+    border-bottom: 1px solid #d1d1d1;
+    margin-left: 42px;
+    height: 50px;
+	}
+	
+
+   #register input{
+    width: 180px;
+    height: 50px;
+    border-radius: 10px;
+    font-family: -webkit-body;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left:-10px;
+	background-color: transparent;
+	border: 1px solid #03b8ff;
+   } 
+	#register p{
+    margin: 0;
+    position: relative;
+    bottom: 20px;
+    left: 270px;
+   }
+
+   #register p a{
+    position: absolute;
+    font-family: sans-serif;
+    color: #787878;
+    bottom: -10px;
+    text-decoration-color: #03b8ff;
+   }
+
+   .gas{
+    position: relative;
+    left: -5px;
+    top: 30px;
+    font-size: 0.8em;
+    color: #787878;
+   }
+
+
+
+
+
+
+
+
+
+
